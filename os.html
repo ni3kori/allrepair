@@ -1,0 +1,146 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Registration</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
+<!-- Custom Theme files -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<meta name="keywords" content="Plans & Pricing Tables Responsive, Login form web template, Sign up Web Templates, Flat Web Templates, Login signup Responsive web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<!--web-fonts-->
+<link href='//fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700' rel='stylesheet' type='text/css'>
+<!--web-fonts-->
+</head>
+<body>
+
+<script>
+function ValidateContactForm()
+{
+    var name = document.ContactForm.Name;
+    var email = document.ContactForm.Email;
+    var phone = document.ContactForm.Telephone;
+    var address = document.ContactForm.Address;
+    var os = document.ContactForm.Os;
+    var version = document.ContactForm.Version;
+    
+
+    if (name.value == "")
+    {
+        window.alert("Please Enter Your Full Name");
+        name.focus();
+        return false;
+    }
+    
+    if (email.value == "")
+    {
+        window.alert("Please Enter E-mail Address");
+        email.focus();
+        return false;
+    }
+    if (email.value.indexOf("@", 0) < 0)
+    {
+        window.alert("Please Enter a VALID E-mail Address");
+        email.focus();
+        return false;
+    }
+    if (email.value.indexOf(".", 0) < 0)
+    {
+        window.alert("Please Enter a VALID E-mail Address");
+        email.focus();
+        return false;
+    }
+
+    if (phone.value=="")
+    {
+        window.alert("Please Enter Your Contact Number.");
+        phone.focus();
+        return false;
+    }
+
+	if(phone.value.length>0)
+		{
+			var p2=/^[0-9]{8,10}$/;
+			if(p2.test(phone.value)==false)
+			{
+				window.alert("Please Enter VALID Contact Number");
+				phone.focus();
+				return false;
+			}
+		}
+
+	if (address.value == "")
+    {
+        window.alert("Please Enter VALID Address");
+        address.focus();
+        return false;
+    }
+
+    if (os.value == "")
+    {
+        window.alert("Please Enter Operating System Name");
+        address.focus();
+        return false;
+    }
+    if (version.value == "")
+    {
+        window.alert("Please Enter Version Number Of OS You Want!");
+        address.focus();
+        return false;
+    }
+    
+
+    
+
+    
+
+    
+    return true;
+}
+
+
+</script>
+
+			<div class="main">
+				<div class="login">
+					<div class="login-top">
+						<img src="images/p.png">
+					</div>
+					<h1>Please Enter Your Details Below</h1>
+					<div class="login-bottom">
+
+					<form method="post" action="bill.html" 
+name="ContactForm" onsubmit="return ValidateContactForm();">	
+
+						<input type="text" size="50" name="Name" class="password" placeholder="Full Name">
+
+						<input type="text" size="65" name="Email" class="password" placeholder="Email Address" >										
+						<input type="text" name="Telephone" class="password" placeholder="Mobile Number" >
+
+						<input type="text" name="Address" class="password" placeholder="Enter Address" >
+
+						<input type="text" name="Os" class="password" placeholder="Enter Operating System" >
+
+						<input type="text" name="Version" class="password" placeholder="Enter Version No." >
+
+						
+
+						
+
+
+						<input type="submit" value="login" name="submit">
+
+					</form>
+
+
+					<a href="#"><p>All above information is safe with us.</p></a>
+					</div>
+				</div>
+			</div>
+		<div class="footer">
+			
+		</div>
+
+</body>
+</html>
